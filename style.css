@@ -1,0 +1,44 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f1f5f4;
+  color: #203630;
+  font: 1rem/1.55 "Segoe UI", sans-serif;
+}
+
+.report {
+  max-width: 52rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.summary-card, .result-item {
+  background: white;
+  border: 1px solid #cad9d3;
+  border-radius: .5rem;
+  padding: .75rem 1rem;
+}
+
+.summary-card {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 .3rem .5rem 0;
+  border-top: 3px solid #24745c;
+}
+
+.results { margin-top: 2rem; }
+.result-list { list-style: none; padding: 0; }
+.result-item { margin-bottom: .5rem; }
+.result-name { display: inline-block; min-width: 5rem; font-weight: 650; }
+
+select, button {
+  font: inherit;
+  margin: .25rem;
+  padding: .35rem .7rem;
+  border: 1px solid #718d81;
+  border-radius: .35rem;
+}
+
+button { background: #205f4b; color: white; cursor: pointer; }
+button:hover { background: #164735; }
