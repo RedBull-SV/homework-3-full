@@ -15,7 +15,9 @@ function selectAttempts(filter) {
   return attempts
 }
 
-function renderAttempts(attempts, count, list) {
+function renderAttempts(attempts) {
+  const count = document.querySelector('#result-count')
+  const list = document.querySelector('#result-list')
   let html = ''
   attempts.forEach((attempt) => {
     const status = attempt.passed ? 'Порог пройден' : 'Порог не пройден'
@@ -31,12 +33,10 @@ function renderAttempts(attempts, count, list) {
 function startFilter() {
   const form = document.querySelector('#filter-form')
   const select = document.querySelector('#filter')
-  const count = document.querySelector('#result-count')
-  const list = document.querySelector('#result-list')
 
   form.addEventListener('submit', (event) => {
     event.preventDefault()
-    renderAttempts(selectAttempts(select.value), count, list)
+    renderAttempts(selectAttempts(select.value))
   })
 }
 
